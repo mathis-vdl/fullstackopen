@@ -1,11 +1,11 @@
 import Person from './Person'
 
-const Persons = ({ persons }) => {
-  console.log('Persons reçoit:', persons.map(p => p.name))
+const Persons = ({ persons, onDelete }) => {
+  console.log('Persons: ', persons.map(p => p.name))
   return (
     <div>
       {persons.map(person => (
-        <Person key={person.id} person={person} />
+        <Person key={person.id} person={person} onDelete={onDelete} />
       ))}
     </div>
   )
