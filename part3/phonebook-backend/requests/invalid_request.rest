@@ -1,0 +1,16 @@
+### Missing name
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "98415614984"
+}
+
+### Already exists
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "06-12345678"
+}
