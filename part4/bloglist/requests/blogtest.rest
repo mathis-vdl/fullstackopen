@@ -1,0 +1,69 @@
+### Create blog
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Toulouse",
+  "author": "Mathis Vidal",
+  "url": "https://htegrfzeh",
+  "likes": 5
+}
+
+### Blog list
+GET http://localhost:3003/api/blogs
+
+### Create user
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "mathis",
+  "name": "Mathis",
+  "password": "motdepasse"
+}
+
+### User list
+GET http://localhost:3003/api/users
+
+### correct login
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "mathis",
+  "password": "motdepasse"
+}
+
+### wrong password
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "mathis",
+  "password": "password"
+}
+
+
+
+
+
+### Create blog with token
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer [paste token here]
+
+{
+  "title": "Auth blog",
+  "author": "Mathis",
+  "url": "https://rbhnvijv"
+}
+
+### Create blog without token
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "No Token",
+  "author": "Mathis",
+  "url": "https://bivzuohiepfv"
+}
